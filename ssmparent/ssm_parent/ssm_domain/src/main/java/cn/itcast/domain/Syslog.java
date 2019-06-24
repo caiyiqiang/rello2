@@ -1,5 +1,7 @@
 package cn.itcast.domain;
 
+import cn.itcast.utils.DateUtils;
+
 import java.util.Date;
 
 /**
@@ -36,6 +38,10 @@ public class Syslog {
     }
 
     public String getVisitTimeStr() {
+        if(visitTime!=null){
+
+            visitTimeStr = DateUtils.DatetoString(visitTime, "yyyy-MM-dd HH-mm");
+        }
         return visitTimeStr;
     }
 

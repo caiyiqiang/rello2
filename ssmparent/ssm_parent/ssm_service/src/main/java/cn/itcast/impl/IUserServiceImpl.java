@@ -55,7 +55,9 @@ public class IUserServiceImpl implements IUserService{
         }
         return list;
     }
-
+    /**
+     * 查询所有用户信息并分页
+     */
     @Override
     public List<UserInfo> findAll(int page,int size) throws Exception{
         PageHelper.startPage(page,size);

@@ -52,4 +52,16 @@ public class OrdersController {
         mv.setViewName("orders-show");
         return mv;
     }
+
+    /**
+     * 订单
+     */
+    @RequestMapping("/findOrderById.do")
+    public ModelAndView findOrderById(@RequestParam(name = "id") String orderId) throws Exception{
+        ModelAndView mv=new ModelAndView();
+        Orders orders=iOrderService.findOrderById(orderId);
+        mv.addObject("orders",orders);
+        mv.setViewName("all-order-manage-edit");
+        return mv;
+    }
 }

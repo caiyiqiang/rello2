@@ -31,4 +31,9 @@ public class IOrderServiceImpl implements IOrderService{
     public Orders findById(String ordersId) throws Exception{
         return iOrdersDao.findById(ordersId);
     }
+
+    @Override
+    public Orders findOrderById(String orderId) throws Exception {
+        return iOrdersDao.findOrderById(orderId);
+    }
 }
